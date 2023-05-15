@@ -1,7 +1,10 @@
 from dotenv import load_dotenv
 from os import environ
+import logging
 
 load_dotenv()
+
+logging.basicConfig(level=logging.INFO)
 
 HEADERS = {
     "Accept": "*/*",
