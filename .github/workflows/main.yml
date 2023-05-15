@@ -38,5 +38,5 @@ jobs:
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/wildparser:v1
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker container prune
+            echo y | sudo docker container prune
             sudo docker run -it --name wildparser -v ~/wildparser/links.txt:/app/parcer/links.txt -v ~/wildparser/.env:/app/settings/.env vbamnup/wildparser:v1
