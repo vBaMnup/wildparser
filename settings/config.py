@@ -4,7 +4,7 @@ import logging
 
 load_dotenv()
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
 HEADERS = {
     "Accept": "*/*",
