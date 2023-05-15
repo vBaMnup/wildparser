@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import requests
 from time import sleep
 from .bot import send_message
