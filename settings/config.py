@@ -1,7 +1,11 @@
 from dotenv import load_dotenv
 from os import environ
+import logging
+from random import randint
 
 load_dotenv()
+
+logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
 HEADERS = {
     "Accept": "*/*",
@@ -20,6 +24,6 @@ HEADERS = {
     "sec-ch-ua-platform": environ.get("SECCHUAPLATFORM"),
 }
 
-DELAY = int(environ.get("DELAY"))
+DELAY = randint(600, 3600)
 TELEGRAM_TOKEN = environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = environ.get("TELEGRAM_CHAT_ID")
